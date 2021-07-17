@@ -4,29 +4,32 @@
 </head>
 <body>
   <nav>
-    <a href="/explore">
-      <button type="submit" id="explore-button">Explore</button>
-    </a>
+    <a 
+    href="/explore" id="explore-link">Explore</a>
 
     <% if (user) { %>
 
-      <a href="/collections/new">
-        <button type="submit" id="new-collection-button">New Collection</button>
-      </a>
+      <a 
+        href="/collections/new">New Collection</a>
 
       <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
+        <button type="submit">Logout</button></a>
 
-      <% if (user?.profile.avatar) { %>
-        <div>
-          <img 
-            src="<%= user.profile.avatar %>" 
-            alt="<%= user.profile.name %> avatar"
-            id="profile-pic"
-          >
-        </div>
-      <% } %>
+        <a href="/profile" class="siwg-link">
+          <% if (user?.profile.avatar) { %>
+            <img 
+              src="<%= user.profile.avatar %>" 
+              alt="<%= user.profile.name %> avatar"
+              id="profile-pic"
+            >
+          <% } else { %>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/1200px-12in-Vinyl-LP-Record-Angle.jpg" 
+              alt="avatar placeholder"
+              id="profile-pic"
+              >
+        <% } %>
+      </a>
 
     <% } else { %>
 
