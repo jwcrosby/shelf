@@ -4,15 +4,39 @@
 </head>
 <body>
   <nav>
+    <a href="/explore">
+      <button type="submit" id="explore-button">Explore</button>
+    </a>
+
     <% if (user) { %>
+
+      <a href="/collections/new">
+        <button type="submit" id="new-collection-button">New Collection</button>
+      </a>
+
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
+
+      <% if (user?.profile.avatar) { %>
+        <div>
+          <img 
+            src="<%= user.profile.avatar %>" 
+            alt="<%= user.profile.name %> avatar"
+            id="profile-pic"
+          >
+        </div>
+      <% } %>
+
     <% } else { %>
+
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
       </a>
     <% } %>
+
+
+    </a>
   </nav>
