@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+import { Collection } from "../models/collection.js"
 
 export {
     show,
@@ -7,13 +8,19 @@ export {
 function show(req, res) {
     //Find the profileID of the user (passed through middleware)
     Profile.findById(req.user.profile._id)
-        //?? Ask David for better explaination 
         .then(profile => {
-            res.render("profiles/show", {
-                title: `${profile.name}'s Shelf`,
-                profile,
+            //Find the collections associated with that profile
+            Collection.find({ owner: profile._id })
+            .then(collections => {
+                //Then render
+                res.render("profiles/show", {
+                    title: `My Profile`,
+                    profile,
+                    collections
+                })
             })
         })
+    
     //Error handling
     .catch((err) => {
         console.log(err)
