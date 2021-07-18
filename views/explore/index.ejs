@@ -5,14 +5,15 @@
 
     <% collections.forEach(collection => { %>
 
-        <div>
-            <h3> <%= collection.name %></h3>
+        <a href="/collection/<%= collection._id %>">
+            <div>
+                <h2> <%= collection.name %></h2>
+                <h3> <%= collection.type %></h3>
 
+                <h4> <%= collection.owner.name %></h4>
 
-
-
-        </div>
-
+            </div>
+        </a>
     <% }) %>
 
 </main>
