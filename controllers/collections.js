@@ -26,5 +26,17 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    console.log("show collection")
+    Collection.findById(req.params.collectionId)
+    //?Why again?
+    .populate("owner")
+    .then(collection => {
+        res.render('collections/show', {
+        collection,
+        title: "🌮 show"
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/explore')
+    })
 }

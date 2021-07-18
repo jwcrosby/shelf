@@ -10,3 +10,4 @@ const router = Router()
 
 router.get('/new', isLoggedIn, collectionsCtrl.new)
 router.post("/", isLoggedIn, collectionsCtrl.create)
+router.get("/:collectionId", collectionsCtrl.show)
