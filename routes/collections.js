@@ -7,3 +7,5 @@ export {
 }
 
 const router = Router()
+
+router.get('/new', collectionsCtrl.new)
