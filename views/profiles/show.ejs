@@ -1,24 +1,21 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<% if (profile.avatar) { %>
-    <div>
-        <img 
-            class="profile-avatar"
-            src="<%= profile.avatar %>"
-            alt="<%= profile.name %> avatar"
-        >
-    </div>
-<% } %>
+<main>
+
+    <h1><%= title %></h1>
+
+    <% if (profile.avatar) { %>
+        <div>
+            <img 
+                class="profile-avatar"
+                src="<%= profile.avatar %>"
+                alt="<%= profile.name %> avatar"
+            >
+        </div>
+    <% } %>
 
 
-
-
-
-
-
-
-
-
+</main>
 
 <%- include('../partials/footer') %>

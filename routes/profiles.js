@@ -8,4 +8,4 @@ export {
 
 const router = Router()
 
-router.get("/:id", isLoggedIn, profilesCtrl.show)
+router.get("/me", isLoggedIn, profilesCtrl.show)
