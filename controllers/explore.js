@@ -1,7 +1,19 @@
+import { Collection } from '../models/collection.js'
+
 export {
-    show
+    index
 }
 
-function show(req, res) {
-    console.log("show explore")
+function index(req, res) {
+    Collection.find({})
+    .then(collections => {
+        res.render("explore/index", {
+            collections,
+            title: "Explore"
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/`)
+    })
 }

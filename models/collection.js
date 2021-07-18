@@ -12,15 +12,15 @@ const collectionSchema = new Schema({
     } ,
     type: {
         type: String,
-        enum: ["Comics", "CDs", "Movies", "Tapes", "Video Games", "Vinyl Records", "Other"],
+        enum: ["Books", "Comics", "CDs", "Movies", "Tapes", "Video Games", "Vinyl Records", "Other"],
         required: true,
     },
+    records: [{type: Schema.Types.ObjectId, ref: 'Record'}],
     owner: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: "Profile", 
         required: true
-    },
-    records: [{type: Schema.Types.ObjectId, ref: 'Record'}]
+    }
 }, {
     timestamps: true
 })

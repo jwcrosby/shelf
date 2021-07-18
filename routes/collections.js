@@ -8,4 +8,5 @@ export {
 
 const router = Router()
 
-router.get('/new', collectionsCtrl.new)
+router.get('/new', isLoggedIn, collectionsCtrl.new)
+router.post("/", isLoggedIn, collectionsCtrl.create)
