@@ -26,7 +26,7 @@
 
     <h2><%= record.author %></h2>
 
-    <h2><%= record.releaseDate %></h2>
+    <h2><%= record.releaseDate.toLocaleDateString('en-US', {}) %></h2>
 
     <h2><%= record.notes %></h2>
 

@@ -43,7 +43,7 @@
 
         <h4><%= record.author %></h4>
 
-        <h4><%= record.releaseDate %></h4>
+        <h4><%= record.releaseDate.toLocaleDateString('en-US', {}) %></h4>
 
         <h4><%= record.notes %></h4>
 

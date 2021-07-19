@@ -14,19 +14,19 @@
         method="POST">
 
         <label for="title-input">Title:</label>
-            <input type="text" name="title" id="title-input">
+            <input type="text" name="title" id="title-input"  value="<%= record.title %>" >
 
         <label for="author-input">Artist/Author:</label>
-            <input type="text" name="author" id="author-input">
+            <input type="text" name="author" id="author-input" value="<%= record.author %>">
 
         <label for="release-date">Release Date:</label>
-            <input type="date" name="releaseDate" id="release-date">
+            <input type="date" name="releaseDate" id="release-date" value="<%= record.releaseDate %>">
 
         <label for="notes-input">Notes:</label>
-            <input type="text" name="notes" id="notes-input">
+            <input type="text" name="notes" id="notes-input" value="<%= record.notes %>">
 
         <label for="image-url-input">Image URL:</label>
-            <input type="text" name="imageUrl" id="image-url-input">
+            <input type="text" name="imageUrl" id="image-url-input" value="<%= record.imageUrl %>">
 
         <button type="submit">Edit Record</button>
 
