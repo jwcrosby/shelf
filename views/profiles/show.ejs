@@ -24,9 +24,15 @@
 
                 <h3>Type: <%= collection.type %></h3>
 
-            <a href="/collections/<%= collection._id %>">👁View</a>
+                <a href="/collections/<%= collection._id %>">
+                <button>👀View</button></a>
 
-            <a href="/collections/<%= collection._id %>/REPLACEWITHDELETE">❌Delete</a>
+                <form 
+                        action="/collections/<%= collection._id %>?_method=DELETE"
+                        class="delete-form"
+                        method="POST"
+                >
+                <button type="submit">❌Delete</button></form>
 
         </div>
         <% }) %>
