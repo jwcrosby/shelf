@@ -10,18 +10,19 @@ const recordSchema = new Schema({
     title: {
         type: String
     },
-    artist: {
+    author: {
         type: String
     },
     releaseDate: {
         type: Date
     },
-    pressingNotes: {
+    notes: {
         type: String
     },
     imageUrl: {
         type: String
     },
+    collectionParent: {type: mongoose.Schema.Types.ObjectId, ref: "Collection", required: true}
 }, {
     timestamps: true
 })

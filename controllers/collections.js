@@ -28,12 +28,13 @@ function create(req, res) {
 
 function show(req, res) {
     Collection.findById(req.params.collectionId)
-    //?Why again?
-    .populate("owner")
+
+    .populate("owner")    //?Why again?
+    
     .then(collection => {
         res.render('collections/show', {
         collection,
-        title: "🌮 show"
+        title: collection.name
         })
     })
     .catch(err => {

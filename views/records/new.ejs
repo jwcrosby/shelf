@@ -2,14 +2,30 @@
 <%- include('../partials/nav') %>
 
 <main>
-<!--     
-    <form 
-    action="/flights/<%= //flight._id %>/destinations/<%= //destination._id %>?_method=DELETE"
-    class="delete-form"
-    method="POST"
-    >
-    <button type="submit">X</button>
-    </form> -->
+
+    <form>
+        <form id="add-destination-form" 
+        action="/collections/<%= collection._id %>/records/" 
+        method="POST">
+
+        <label for="title-input">Title:</label>
+            <input type="text" name="title" id="title-input">
+
+        <label for="author-input">Artist/Author:</label>
+            <input type="text" name="author" id="author-input">
+
+        <label for="release-date">Release Date:</label>
+            <input type="datetime-local" name="releaseDate" id="release-date">
+
+        <label for="notes-input">Notes:</label>
+            <input type="text" name="notes" id="notes-input">
+
+        <label for="image-url-input">Image URL:</label>
+            <input type="text" name="imageUrl" id="image-url-input">
+
+        <button type="submit">Add Record</button>
+
+    </form>
 
 
 </main>
