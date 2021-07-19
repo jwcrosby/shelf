@@ -43,7 +43,19 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    console.log("show record")
+    Record.findById(req.params.recordId)
+    .populate("collection owner")
+    
+    .then(record => {
+        res.render("records/show", {
+        record,
+        title: record.name
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/error')
+    })
 }
 
 function deleteRecord(req, res) {

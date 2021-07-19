@@ -31,14 +31,14 @@
 
         <% collection.records.forEach(record => { %>
 
-        <a href="/" class="logo-link">
+        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
             <img 
                 src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
                 alt="album"
                 id="album-art-pic"
         ></a>
         
-        <a href="/" class="logo-link">
+        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
             <h3> <%= record.title %> </h3></a>
 
         <h4><%= record.author %></h4>
@@ -46,6 +46,9 @@
         <h4><%= record.releaseDate %></h4>
 
         <h4><%= record.notes %></h4>
+
+        <a href="/collections/<%= collection._id %>/records/<%= record._id %>/REPLACEADDEDIT">
+            <button type="submit">✏️</button></a>
 
         <form 
         action="/collections/<%= collection._id %>/records/<%= record._id %>?_method=DELETE"
