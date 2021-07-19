@@ -1,0 +1,7 @@
+main {
+    background-image: url("/images/background/agnieszka-kowalczyk-z-qxSYHXrh4-unsplash.jpg");
+    background-color: #cccccc;
+    color: rgb(245, 245, 245);
+
+    min-height: calc(100vh - 71px);
+}

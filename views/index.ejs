@@ -1,16 +1,17 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/index.css">
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+
+<h1>Storage made simple.</h1>
+
+<h2>Discover music and more with Shelf.</h2>
+
+
+
+
+
 </main>
 
 <%- include('./partials/footer') %>
