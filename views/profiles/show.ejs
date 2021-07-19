@@ -19,11 +19,16 @@
 
     <% collections.forEach(collection => { %>
 
-        <a href="/collections/<%= collection._id %>">
-            <div>
+        <div>
                 <h2>Name:  <%= collection.name %></h2>
+
                 <h3>Type: <%= collection.type %></h3>
-            </div>
+
+            <a href="/collections/<%= collection._id %>">👁View</a>
+
+            <a href="/collections/<%= collection._id %>/REPLACEWITHDELETE">❌Delete</a>
+
+        </div>
         <% }) %>
 
 </main>
