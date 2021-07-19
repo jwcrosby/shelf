@@ -13,24 +13,24 @@ router.get('/new', isLoggedIn, collectionsCtrl.new)
 
 router.post("/", isLoggedIn, collectionsCtrl.create)
 
-router.get("/:collectionId", isLoggedIn, collectionsCtrl.show)
+router.get("/:collectionId", collectionsCtrl.show)
 
-router.get("/:collectionId/edit", collectionsCtrl.edit)
+router.get("/:collectionId/edit", isLoggedIn, collectionsCtrl.edit)
 
-router.put("/:collectionId", collectionsCtrl.update)
+router.put("/:collectionId", isLoggedIn, collectionsCtrl.update)
 
 router.delete("/:collectionId", isLoggedIn, collectionsCtrl.delete)
 
 // records routes
 
-router.get('/:collectionId/records/new', recordsCtrl.new)
+router.get('/:collectionId/records/new', isLoggedIn, recordsCtrl.new)
 
-router.post("/:collectionId/records", recordsCtrl.create)
+router.post("/:collectionId/records", isLoggedIn, recordsCtrl.create)
 
-router.get("/:collectionId/records/:recordId", recordsCtrl.show)
+router.get("/:collectionId/records/:recordId", isLoggedIn, recordsCtrl.show)
 
-router.get("/:collectionId/records/:recordId/edit", recordsCtrl.edit)
+router.get("/:collectionId/records/:recordId/edit", isLoggedIn, recordsCtrl.edit)
 
-router.put("/:collectionId/records/:recordId", recordsCtrl.update)
+router.put("/:collectionId/records/:recordId", isLoggedIn, recordsCtrl.update)
 
-router.delete("/:collectionId/records/:recordId", recordsCtrl.delete)
+router.delete("/:collectionId/records/:recordId", isLoggedIn, recordsCtrl.delete)
