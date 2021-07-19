@@ -9,8 +9,8 @@
     <h1><%= title %></h1>
     
     <form 
-        id="add-record-form" 
-        action="/collections/<%= record.collectionParent._id %>/records" 
+        id="edit-record-form" 
+        action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=PUT"
         method="POST">
 
         <label for="title-input">Title:</label>
@@ -28,9 +28,11 @@
         <label for="image-url-input">Image URL:</label>
             <input type="text" name="imageUrl" id="image-url-input">
 
-        <button type="submit">Add Record</button>
+        <button type="submit">Edit Record</button>
 
     </form>
+
+    <%= // %>
 
 </main>
 

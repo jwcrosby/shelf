@@ -95,7 +95,11 @@ function edit(req, res) {
     .then(record => {
         res.render("records/edit", {
         record,
-        title: `Edit: ${record.title}`
+        title: `Edit: ${record.title}`,
+        autofillEditForm: function() { 
+
+            // document.getElementById("title-input").value =  "TEST";
+        }
         })
     })
     .catch(err => {
@@ -106,4 +110,44 @@ function edit(req, res) {
 
 function update(req, res) {
 
+    console.log("YOU ARE HERE")
+    //Use the recordsId (defined in the route) to find the record
+    Record.findById(req.params.recordId)
+    .populate("collectionParent")
+    .then(record => {
+
+        console.log(record.title)
+        console.log(req.body.title)
+
+        //The update the record based on the values input on the form
+        //The if statements prevent an update from occurring if there is no change
+        if(record.title !== req.body.title) {
+            record.title = req.body.title
+        }
+
+        if(record.author !== req.body.author) {
+            record.author = req.body.author
+        }
+
+        if(record.releaseDate !== req.body.releaseDate) {
+            record.releaseDate = req.body.releaseDate
+        }
+
+        if(record.notes !== req.body.notes) {
+            record.notes = req.body.notes
+        }
+
+        if(record.imageUrl !== req.body.imageUrl) {
+            record.imageUrl = req.body.imageUrl
+        }
+
+        record.save()
+        .then(() => {
+            res.redirect(`/collections/${req.params.collectionId}/records/${req.params.recordId}`)
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/error')
+    })
 }

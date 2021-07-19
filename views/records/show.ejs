@@ -14,11 +14,21 @@
 
     <h1><%= title %></h1>
 
-    <h4><%= record.author %></h4>
+    <a href="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>/edit">
+        <button type="submit">✏️</button></a>
 
-    <h4><%= record.releaseDate %></h4>
+    <form 
+    action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=DELETE"
+    class="delete-form"
+    method="POST">
+        <button type="submit">❌</button>
+    </form>
 
-    <h4><%= record.notes %></h4>
+    <h2><%= record.author %></h2>
+
+    <h2><%= record.releaseDate %></h2>
+
+    <h2><%= record.notes %></h2>
 
 </main>
 
