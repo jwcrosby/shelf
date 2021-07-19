@@ -25,4 +25,8 @@ router.post("/:collectionId/records", recordsCtrl.create)
 
 router.get("/:collectionId/records/:recordId", recordsCtrl.show)
 
+router.get("/:collectionId/records/:recordId/edit", recordsCtrl.edit)
+
+router.get("/:collectionId/records/:recordId", recordsCtrl.update)
+
 router.delete("/:collectionId/records/:recordId", recordsCtrl.delete)

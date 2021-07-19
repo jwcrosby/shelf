@@ -3,14 +3,14 @@
 
 <main>
 
-    <a href="/collections/<%= collection._id %>">
-        <h3> Return to <%= collection.name %></h3></a>
+    <a href="/collections/<%= record.collectionParent._id %>">
+        <h3> Return to <%= record.collectionParent.name %></h3></a>
 
     <h1><%= title %></h1>
     
     <form 
         id="add-record-form" 
-        action="/collections/<%= collection._id %>/records" 
+        action="/collections/<%= record.collectionParent._id %>/records" 
         method="POST">
 
         <label for="title-input">Title:</label>

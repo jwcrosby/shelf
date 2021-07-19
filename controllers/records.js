@@ -6,6 +6,8 @@ export {
     create,
     show,
     deleteRecord as delete,
+    edit,
+    update
 }
 
 function newRecord(req, res) {
@@ -44,12 +46,12 @@ function create(req, res) {
 
 function show(req, res) {
     Record.findById(req.params.recordId)
-    .populate("collection owner")
+    .populate("collectionParent")
     
     .then(record => {
         res.render("records/show", {
         record,
-        title: record.name
+        title: record.title
         })
     })
     .catch(err => {
@@ -83,4 +85,25 @@ function deleteRecord(req, res) {
         console.log(err)
         res.redirect(`/collections/${req.params.collectionId}`)
     })
+}
+
+function edit(req, res) {
+
+    Record.findById(req.params.recordId)
+    .populate("collectionParent")
+    
+    .then(record => {
+        res.render("records/edit", {
+        record,
+        title: `Edit: ${record.title}`
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/error')
+    })
+}
+
+function update(req, res) {
+
 }

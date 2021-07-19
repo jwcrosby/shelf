@@ -3,7 +3,22 @@
 
 <main>
 
+    <a href="/collections/<%= record.collectionParent._id %>">
+        <h3> Return to <%= record.collectionParent.name %></h3></a>
 
+    <img 
+        src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
+        alt="album"
+        id="album-art-pic"
+        >
+
+    <h1><%= title %></h1>
+
+    <h4><%= record.author %></h4>
+
+    <h4><%= record.releaseDate %></h4>
+
+    <h4><%= record.notes %></h4>
 
 </main>
 
