@@ -28,37 +28,60 @@ body {
 nav {
   color: rgb(241,241,241);
   background-color: rgb(40,42,53);
-  font-size: 1.6rem;
   display: flex;
-  justify-content: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-nav > div > a {
+
+#nav-left {
   color: rgb(241,241,241);
-  background-color: rgb(40,42,53);
+  font-size: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#title-link {
+  text-decoration: none;
+  margin: 10px 0px 10px 6px;
+}
+
+#nav-left > a:visited {
+  color: rgb(241,241,241);
+}
+
+#logo-pic {
+  height: 42px;
+  padding-top: 4px;
+  margin: 10px 0px 10px 14px;
+}
+
+
+#nav-right {
+  color: rgb(241,241,241);
   font-size: 1.6rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-nav > div > a {
+#nav-right > a {
   text-decoration: none;
-  margin: 10px 10px 12px 0px;
+  margin: 10px 14px 10px 0px;
 }
 
-nav > div > a:hover {
-   background-color: rgb(78, 78, 103); 
+#nav-right > a:hover {
+    background-color: rgb(78, 78, 103); 
 }
 
-nav > div > a:visited {
+#nav-right > a:visited {
   color: rgb(241,241,241);
 }
 
 #profile-pic {
   border-radius: 50%;
-  width: 60px;
+  width: 48px;
 }
 
 main {
