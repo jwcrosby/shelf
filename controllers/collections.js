@@ -28,7 +28,7 @@ function create(req, res) {
 
 function show(req, res) {
     Collection.findById(req.params.collectionId)
-
+    .populate("records")
     .populate("owner")
     
     .then(collection => {
