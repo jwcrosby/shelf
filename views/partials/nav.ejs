@@ -4,42 +4,50 @@
 </head>
 <body>
   <nav>
-    <a 
-    href="/explore" id="explore-link">Explore</a>
+    <div id="nav-left">
+      <a 
+      href="/" id="title-link">Shelf</a>
 
-    <% if (user) { %>
+    </div>
+
+    <div id="nav-right">
 
       <a 
-        href="/collections/new">New Collection</a>
+      href="/explore" id="explore-link">Explore</a>
 
-      <a href="/auth/logout">
-        <button type="submit">Logout</button></a>
+      <% if (user) { %>
 
-        <a href="/profiles/me" class="siwg-link">
-          <% if (user?.profile.avatar) { %>
-            <img 
-              src="<%= user.profile.avatar %>" 
-              alt="<%= user.profile.name %> avatar"
-              id="profile-pic"
-            >
-          <% } else { %>
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/1200px-12in-Vinyl-LP-Record-Angle.jpg" 
-              alt="avatar placeholder"
-              id="profile-pic"
+        <a 
+          href="/collections/new">New Collection</a>
+
+        <a href="/auth/logout">
+          <button type="submit">Logout</button></a>
+
+          <a href="/profiles/me" class="siwg-link">
+            <% if (user?.profile.avatar) { %>
+              <img 
+                src="<%= user.profile.avatar %>" 
+                alt="<%= user.profile.name %> avatar"
+                id="profile-pic"
               >
-        <% } %>
+            <% } else { %>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/1200px-12in-Vinyl-LP-Record-Angle.jpg" 
+                alt="avatar placeholder"
+                id="profile-pic"
+                >
+          <% } %>
+        </a>
+
+      <% } else { %>
+
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+      <% } %>
       </a>
 
-    <% } else { %>
-
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
-
-
-    </a>
+    </div>
   </nav>
