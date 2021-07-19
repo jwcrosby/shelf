@@ -110,7 +110,7 @@ function edit(req, res) {
 
 function update(req, res) {
 
-    //Use the recordsId (defined in the route) to find the record
+    //Use the recordId (defined in the route) to find the record
     Record.findById(req.params.recordId)
     .populate("collectionParent")
     .then(record => {

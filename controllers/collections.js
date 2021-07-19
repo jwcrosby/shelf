@@ -89,6 +89,26 @@ function edit(req, res) {
     })
 }
 
-function update() {
-    
+function update(req, res) {
+
+    //Use the collectionId (defined in the route) to find the collection
+    Collection.findById(req.params.collectionId)
+    .populate("collectionParent")
+    .then(collection => {
+
+        //The update the collection based on the values input on the form
+        //The if statements prevent an update from occurring if there is no change
+        if(collection.name !== req.body.name) {
+            collection.name = req.body.name
+        }
+
+        collection.save()
+        .then(() => {
+            res.redirect(`/collections/${req.params.collectionId}`)
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/error')
+    })
 }
