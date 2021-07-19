@@ -18,11 +18,11 @@ function create(req, res) {
     req.body.owner = req.user.profile
     Collection.create(req.body)
     .then(collection => {
-        res.redirect('/')
+        res.redirect('/profiles/me')
     })
     .catch(err => {
         console.log(err)
-        res.redirect('/explore')
+        res.redirect('/profiles/me')
     })
 }
 
