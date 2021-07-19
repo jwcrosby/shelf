@@ -22,7 +22,9 @@ const recordSchema = new Schema({
     imageUrl: {
         type: String
     },
-    collectionParent: {type: mongoose.Schema.Types.ObjectId, ref: "Collection", required: true}
+    collectionParent: {type: mongoose.Schema.Types.ObjectId, ref: "Collection", 
+    // required: true
+}
 }, {
     timestamps: true
 })

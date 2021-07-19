@@ -21,4 +21,4 @@ router.delete("/:collectionId", isLoggedIn, collectionsCtrl.delete)
 
 router.get('/:collectionId/records/new', recordsCtrl.new)
 
-router.post("/:collectionId/records/", recordsCtrl.create)
+router.post("/:collectionId/records", recordsCtrl.create)

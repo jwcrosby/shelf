@@ -29,7 +29,7 @@ function create(req, res) {
 function show(req, res) {
     Collection.findById(req.params.collectionId)
 
-    .populate("owner")    //?Why again?
+    .populate("owner")
     
     .then(collection => {
         res.render('collections/show', {
