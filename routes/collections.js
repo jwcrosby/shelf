@@ -17,8 +17,10 @@ router.get("/:collectionId", isLoggedIn, collectionsCtrl.show)
 
 router.delete("/:collectionId", isLoggedIn, collectionsCtrl.delete)
 
-//??Records routes
+// records routes
 
-router.get('/:collectionId/records/new', isLoggedIn, recordsCtrl.new)
+router.get('/:collectionId/records/new', recordsCtrl.new)
 
-router.post("/:collectionId/records", isLoggedIn, recordsCtrl.create)
+router.post("/:collectionId/records", recordsCtrl.create)
+
+router.delete("/:collectionId/records/:recordId", recordsCtrl.delete)

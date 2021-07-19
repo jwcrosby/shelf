@@ -39,7 +39,7 @@ function show(req, res) {
     })
     .catch(err => {
         console.log(err)
-        res.redirect('/explore')
+        res.redirect('/error')
     })
 }
 

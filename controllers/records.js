@@ -4,7 +4,8 @@ import { Collection } from '../models/collection.js'
 export {
     newRecord as new,
     create,
-    show
+    show,
+    deleteRecord as delete,
 }
 
 function newRecord(req, res) {
@@ -40,8 +41,34 @@ function create(req, res) {
         })
     })
 }
-//req.params.collectionId
 
 function show(req, res) {
     console.log("show record")
+}
+
+function deleteRecord(req, res) {
+    //Use the recordsId (defined in the route) to find the record
+    Record.findById(req.params.recordId)
+    .populate("collectionParent")
+    .then(record => {
+
+        //Make sure that the current user is the owner of the record
+        if(record.collectionParent.owner.equals(req.user.profile._id)) {
+
+            //If so, delete the record and redirect them back to their profile
+            record.delete()
+            
+        .then(() => {
+            res.redirect(`/collections/${req.params.collectionId}`)
+        })
+
+        } else {
+            //If not, prevent the request 
+        throw new Error("NOT AUTHORIZED")
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/collections/${req.params.collectionId}`)
+    })
 }
