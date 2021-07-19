@@ -4,8 +4,9 @@
 <main>
 
     <form>
-        <form id="add-destination-form" 
-        action="/collections/<%= collection._id %>/records/" 
+        <form 
+        id="add-record-form" 
+        action="/collections/<%= collection._id %>/records" 
         method="POST">
 
         <label for="title-input">Title:</label>
@@ -26,7 +27,6 @@
         <button type="submit">Add Record</button>
 
     </form>
-
 
 </main>
 

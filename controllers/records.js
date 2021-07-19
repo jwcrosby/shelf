@@ -22,17 +22,30 @@ function newRecord(req, res) {
 }
 
 function create(req, res) {
-    Collection.findById(req.params.collectionId, function(err, collection) {
-        //Set the collectionParent relationship
-        req.body.collectionParent = collection
-        //Add the newly created record to the collection's record array
-        collection.records.push(req.body.recordId)
-        //Save the parent collection
-        collection.save(function(err) {
-            //Then redirect
-            res.redirect(`/collections/${collection._id}`)
-        })
-    })
+
+    console.log("YOU ARE HERE")
+
+
+
+
+    
+    // Collection.findById(req.params.collectionId, function(err, collection) {
+    //     console.log(req.body)
+    //     // //Set the collectionParent relationship
+    //     // req.body.collectionParent = collection
+    //     Record.create(req.body)
+
+
+
+
+        // //Add the newly created record to the collection's record array
+        // collection.records.push(req.body.recordId)
+        // //Save the parent collection
+        // collection.save(function(err) {
+        //     //Then redirect
+        //     res.redirect(`/collections/${collection._id}`)
+        // })
+    // })
 }
 //req.params.collectionId
 
