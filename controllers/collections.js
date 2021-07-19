@@ -4,6 +4,7 @@ export {
     newCollection as new,
     create,
     show,
+    deleteCollection as delete,
 }
 
 function newCollection(req, res) {
@@ -34,6 +35,29 @@ function show(req, res) {
         collection,
         title: "🌮 show"
         })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/explore')
+    })
+}
+
+function deleteCollection(req, res) {
+    //Use the collectionId (defined in the route) to find the collection
+    Collection.findById(req.params.collectionId)
+    .then(collection => {
+
+        //Make sure that the current user is the owner of the collection
+        if(collection.owner.equals(req.user.profile._id)) {
+            //If so, delete the collection and redirect them back to their profile
+        collection.delete()
+        .then(() => {
+            res.redirect("/profiles/me")
+        })
+        } else {
+            //If not, prevent the request 
+        throw new Error("NOT AUTHORIZED")
+        }
     })
     .catch(err => {
         console.log(err)
