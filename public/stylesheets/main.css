@@ -26,16 +26,13 @@ body {
 }
 
 nav {
-  color: rgb(241,241,241);
   background-color: rgb(40,42,53);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 #nav-left {
-  color: rgb(241,241,241);
   font-size: 4rem;
   display: flex;
   justify-content: flex-start;
@@ -43,6 +40,7 @@ nav {
 }
 
 #title-link {
+  color: rgb(241,241,241);
   text-decoration: none;
   margin: 10px 0px 10px 6px;
 }
@@ -95,5 +93,30 @@ h1 {
 }
 
 footer{
-  background-color: rgb(255,255,255);
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-logo-pic {
+  height: 42px;
+  padding-top: 4px;
+  margin: 10px 0px 10px 14px;
+}
+
+#footer-title-link {
+  color: rgb(40,42,53);
+  text-decoration: none;
+  margin: 0px 0px 0px 0px;
+}
+
+#footer-title-link:visited {
+  color: rgb(40,42,53);
 }

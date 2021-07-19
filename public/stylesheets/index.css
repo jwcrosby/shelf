@@ -4,4 +4,5 @@ main {
     color: rgb(245, 245, 245);
     background-size: 100vw;
     min-height: calc(100vh - 71px);
+    background-repeat: no-repeat;
 }
