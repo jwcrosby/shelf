@@ -24,7 +24,6 @@ import { router as authRouter } from './routes/auth.js'
 import { router as profilesRouter } from "./routes/profiles.js"
 import { router as apiRouter } from "./routes/api.js"
 import { router as collectionsRouter } from "./routes/collections.js"
-import { router as recordsRouter } from "./routes/records.js"
 import { router as exploreRouter } from "./routes/explore.js"
 
 
@@ -72,7 +71,6 @@ app.use('/auth', authRouter)
 app.use("/profiles", profilesRouter)
 app.use("/api", apiRouter)
 app.use('/collections', collectionsRouter)
-app.use('/records', recordsRouter)
 app.use('/explore', exploreRouter)
 
 // catch 404 and forward to error handler

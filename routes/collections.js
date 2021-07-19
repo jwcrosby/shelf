@@ -13,12 +13,12 @@ router.get('/new', isLoggedIn, collectionsCtrl.new)
 
 router.post("/", isLoggedIn, collectionsCtrl.create)
 
-router.get("/:collectionId", collectionsCtrl.show)
+router.get("/:collectionId", isLoggedIn, collectionsCtrl.show)
 
 router.delete("/:collectionId", isLoggedIn, collectionsCtrl.delete)
 
 //??Records routes
 
-router.get('/:collectionId/records/new', recordsCtrl.new)
+router.get('/:collectionId/records/new', isLoggedIn, recordsCtrl.new)
 
-router.post("/:collectionId/records", recordsCtrl.create)
+router.post("/:collectionId/records", isLoggedIn, recordsCtrl.create)

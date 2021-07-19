@@ -13,7 +13,7 @@ function newRecord(req, res) {
     .then(collection => {
         Record.find({}, function(err, records) {
             res.render("records/new", {
-                title: "Add Record",
+                title: "Add a New Record",
                 records: records,
                 collection
             })
@@ -22,30 +22,23 @@ function newRecord(req, res) {
 }
 
 function create(req, res) {
-
-    console.log("YOU ARE HERE")
-
-
-
-
-    
-    // Collection.findById(req.params.collectionId, function(err, collection) {
-    //     console.log(req.body)
-    //     // //Set the collectionParent relationship
-    //     // req.body.collectionParent = collection
-    //     Record.create(req.body)
-
-
-
-
-        // //Add the newly created record to the collection's record array
-        // collection.records.push(req.body.recordId)
-        // //Save the parent collection
-        // collection.save(function(err) {
-        //     //Then redirect
-        //     res.redirect(`/collections/${collection._id}`)
-        // })
-    // })
+    Collection.findById(req.params.collectionId, function(err, collection) {
+        //Set the record.collectionParent equal to the incoming Collection
+        req.body.collectionParent = collection
+        //Create the new "Record" with the req.body
+        Record.create(req.body)
+        .then(record => {
+            //Add the newly created record to the collection's record array
+            collection.records.push(record._id)
+            console.log(req.body)
+            //Save the parent collection
+            collection.save(function(err) {
+                console.log(collection)
+                //Then redirect
+                res.redirect(`/collections/${collection._id}`)
+            })
+        })
+    })
 }
 //req.params.collectionId
 
