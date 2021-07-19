@@ -2,14 +2,19 @@
 <%- include('../partials/nav') %>
 
 <main>
+    <a href="/profiles/me">
+        <h3>Return to "My Profile"</h3>
+    </a>
 
     <h1>Name: <%= collection.name %></h1>
 
     <h2>Type: <%= collection.type %></h2>
 
+    <a href="/collections/<%= collection._id %>/REPLACEWITHDELETE">➕Add New Collectable</a>
+
     <a href="/collections/<%= collection._id %>">✏️Edit</a>
 
-    <a href="/collections/<%= collection._id %>">👁View</a>
+    <a href="/collections/<%= collection._id %>/REPLACEWITHDELETE">❌Delete</a>
 
 </main>
 
