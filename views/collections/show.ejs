@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/collections/show.css">
 <%- include('../partials/nav') %>
 
 <main>
@@ -24,29 +25,37 @@
         <button type="submit">❌Delete</button></form>
 
     </div>
-    
-    <h2>Records in this Collection</h2>
+    <div>
+        
+        <h2>Records in this Collection</h2>
 
-    <% collection.records.forEach(record => { %>
+        <% collection.records.forEach(record => { %>
 
-    <a href="/" class="logo-link">
-        <img 
-            src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
-            alt="album"
-            id="album-art-pic"
-    ></a>
-    
-    <a href="/" class="logo-link">
-        ><h3> <%= record.title %> </h3></a>
+        <a href="/" class="logo-link">
+            <img 
+                src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
+                alt="album"
+                id="album-art-pic"
+        ></a>
+        
+        <a href="/" class="logo-link">
+            <h3> <%= record.title %> </h3></a>
 
-    <h4><%= record.author %></h4>
+        <h4><%= record.author %></h4>
 
-    <h4><%= record.releaseDate %></h4>
+        <h4><%= record.releaseDate %></h4>
 
-    <h4><%= record.notes %></h4>
+        <h4><%= record.notes %></h4>
 
-    <% }) %>
+        <form 
+        action="/collections/<%= collection._id %>/records/<%= record._id %>?_method=DELETE"
+        class="delete-form"
+        method="POST"
+>
+<button type="submit">❌</button></form>
 
+        <% }) %>
+    </div>
 </main>
 
 <%- include('../partials/footer') %>
