@@ -15,6 +15,10 @@ router.post("/", isLoggedIn, collectionsCtrl.create)
 
 router.get("/:collectionId", isLoggedIn, collectionsCtrl.show)
 
+router.get("/:collectionId/edit", collectionsCtrl.edit)
+
+router.put("/:collectionId", collectionsCtrl.update)
+
 router.delete("/:collectionId", isLoggedIn, collectionsCtrl.delete)
 
 // records routes

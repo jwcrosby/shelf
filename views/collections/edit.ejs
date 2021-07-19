@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+    <h1><%= title %></h1>
+    <form 
+    id="edit-form" 
+    action="/collections/<%= collection._id %>?_method=PUT"
+    method="POST">
+
+        <label for="name-input">Collection Name:</label>
+            <input type="text" name="name" id="name-input">
+
+        <button type="submit">Edit Collection</button>
+    </form>
+</main>
+
+<%- include('../partials/footer') %>

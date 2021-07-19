@@ -5,6 +5,8 @@ export {
     create,
     show,
     deleteCollection as delete,
+    edit,
+    update
 }
 
 function newCollection(req, res) {
@@ -64,4 +66,29 @@ function deleteCollection(req, res) {
         console.log(err)
         res.redirect('/explore')
     })
+}
+
+function edit(req, res) {
+
+    Collection.findById(req.params.collectionId)
+    .populate("owner")
+    
+    .then(collection => {
+        res.render("collections/edit", {
+        collection,
+        title: `Edit: ${collection.name}`,
+        autofillEditForm: function() { 
+
+            // document.getElementById("title-input").value =  "TEST";
+        }
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/error')
+    })
+}
+
+function update() {
+    
 }
