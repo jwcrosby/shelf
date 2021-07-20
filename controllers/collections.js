@@ -12,7 +12,7 @@ export {
 function newCollection(req, res) {
     // Render 'collection/new'
     res.render('collections/new', {
-        title: "Add a New Collection"
+        title: "Add a New Collection | Shelf"
     })
 }
 
@@ -36,7 +36,7 @@ function show(req, res) {
     .then(collection => {
         res.render('collections/show', {
         collection,
-        title: collection.name
+        title: `${collection.name} | Shelf`
         })
     })
     .catch(err => {
@@ -76,11 +76,7 @@ function edit(req, res) {
     .then(collection => {
         res.render("collections/edit", {
         collection,
-        title: `Edit: ${collection.name}`,
-        autofillEditForm: function() { 
-
-            // document.getElementById("title-input").value =  "TEST";
-        }
+        title: `Edit: ${collection.name} | Shelf`
         })
     })
     .catch(err => {

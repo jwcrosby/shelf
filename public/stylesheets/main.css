@@ -66,6 +66,7 @@ nav {
 }
 
 #nav-right > a {
+  color: rgb(241,241,241);
   text-decoration: none;
   margin: 10px 14px 10px 0px;
 }

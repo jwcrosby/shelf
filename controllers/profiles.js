@@ -14,7 +14,7 @@ function show(req, res) {
             .then(collections => {
                 //Then render
                 res.render("profiles/show", {
-                    title: `My Profile`,
+                    title: `My Profile | Shelf`,
                     profile,
                     collections
                 })

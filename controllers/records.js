@@ -16,7 +16,7 @@ function newRecord(req, res) {
     .then(collection => {
         Record.find({}, function(err, records) {
             res.render("records/new", {
-                title: "Add a New Record",
+                title: "Add a New Record | Shelf",
                 records: records,
                 collection
             })
@@ -51,7 +51,7 @@ function show(req, res) {
     .then(record => {
         res.render("records/show", {
         record,
-        title: record.title
+        title: `${record.title}` | Shelf
         })
     })
     .catch(err => {
@@ -95,11 +95,7 @@ function edit(req, res) {
     .then(record => {
         res.render("records/edit", {
         record,
-        title: `Edit: ${record.title}`,
-        autofillEditForm: function() { 
-
-            // document.getElementById("title-input").value =  "TEST";
-        }
+        title: `Edit: ${record.title} | Shelf`
         })
     })
     .catch(err => {

@@ -11,7 +11,7 @@ function index(req, res) {
 
         res.render("explore/index", {
             collections,
-            title: "Explore"
+            title: "Explore | Shelf"
         })
     })
     .catch(err => {

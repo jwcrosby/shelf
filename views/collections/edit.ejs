@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1><%= title %></h1>
+    <h1>Edit: <%= ${collection.name}  %></h1>
     <form 
     id="edit-form" 
     action="/collections/<%= collection._id %>?_method=PUT"
