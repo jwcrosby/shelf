@@ -93,7 +93,7 @@ h1 {
 }
 
 footer{
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(40,42,53);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,17 +106,17 @@ footer{
 }
 
 #footer-logo-pic {
-  height: 42px;
+  height: 35px;
   padding-top: 4px;
-  margin: 10px 0px 10px 14px;
+  margin: 4px 0px 6px 0px;
 }
 
 #footer-title-link {
-  color: rgb(40,42,53);
+  color: rgb(241, 241, 241);
   text-decoration: none;
   margin: 0px 0px 0px 0px;
 }
 
 #footer-title-link:visited {
-  color: rgb(40,42,53);
+  color: rgb(241, 241, 241);
 }
