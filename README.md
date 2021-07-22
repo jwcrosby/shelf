@@ -1,4 +1,4 @@
-![SHELF](/public/images/readme/logo3.png/)
+![SHELF](/public/images/readme/logo.png/)
 
 # [Click here to launch site.](https://witte-shelf.herokuapp.com/)
 
