@@ -19,41 +19,42 @@
 
     </div>
 
-    <div id="collection-container" class="card-container">
+    <div id="collection-container">
 
       <% collections.forEach(collection => { %>
 
-        <div>
+        <div id="individual-collection-container">
 
           <a href="/collections/<%= collection._id %>">
-            <img class="card-img-top" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
+            <img class="collection-image" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
           </a>
 
           <a href="/collections/<%= collection._id %>">
-              <h4 class="card-title"><%= collection.name %></h4>
+              <h4 class="collection-title"><%= collection.name %></h4>
           </a>
 
-          <h5 class="card-text">by <%= collection.owner.name %></h5>
+          <!-- <h7 class="card-text-sub"><%= //collection.type %></h7> -->
+          <div id="owner-box">
 
-          <h7 class="card-text-sub"><%= collection.type %></h7>
+            <% if (collection.owner.avatar) { %>
+              <img
+                id="collection-owner-image"
+                src="<%= collection.owner.avatar %>"
+                alt="<%= collection.owner.name %>'s avatar"
+                class="rounded-circle"
+              />
+            <% } else { %>
+              <img
+                id="collection-owner-image"
+                src="/images/icons/user.png"
+                alt="A placeholder avatar"
+                class="rounded-circle"
+              />
+            <% } %>
 
-          <% if (collection.owner.avatar) { %>
-            <img
-              id="collection-owner-image"
-              src="<%= collection.owner.avatar %>"
-              alt="<%= collection.owner.name %>'s avatar"
-              width="20%"
-              class="rounded-circle"
-            />
-          <% } else { %>
-            <img
-              id="collection-owner-image"
-              src="/images/icons/user.png"
-              alt="A placeholder avatar"
-              width="20%"
-              class="rounded-circle"
-            />
-          <% } %>
+            <h5 id="collection-owner-name">by <%= collection.owner.name %></h5>
+
+        </div>
 
           <a href="/collections/<%= collection._id %>" class="btn btn-primary">View</a>
 

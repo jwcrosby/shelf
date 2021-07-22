@@ -14,6 +14,15 @@ In the not-so-distant future...
 * CSS
 * JavaScript
 
+* JavaScript
+* HTML
+* CSS
+* EJS
+* NodeJS
+* Express
+* MongoDB
+* Mongoose
+
 ## Attributions
 
 * Icons made by Smashicons from www.flaticon.com.

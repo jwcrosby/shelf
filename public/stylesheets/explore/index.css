@@ -35,10 +35,45 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Rubik', sans-serif;
-    margin-top: 16px;
+    /* margin-top: 16px; */
 }
 
+#individual-collection-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 87vw;
+    margin: 10px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
 
-.card-img-top {
-    max-width: 200px;
+.collection-image {
+    max-width: 90px;
+}
+
+.collection-title {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 2.5rem;
+}
+
+.collection-title > a:visited {
+    color: rgb(0, 0, 0);
+}
+
+#owner-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#collection-owner-image {
+    max-width: 60px;
+}
+#collection-owner-name {
+    margin-top: 2px;
 }
