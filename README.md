@@ -1,6 +1,6 @@
 # ReadMe in progress...
 
-![SHELF](/images/readme/X.png/)
+![SHELF](/images/readme/logo.png/)
 
 # [Click here to launch site!](https://witte-shelf.herokuapp.com/)
 
@@ -13,6 +13,9 @@ In the not-so-distant future... Your collections made simple.
 * HTML
 * CSS
 * JavaScript
+
+## Built With
+
 * EJS
 * NodeJS
 * Express
