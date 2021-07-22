@@ -27,7 +27,7 @@ In the not-so-distant future...
 
 * Icons made by Smashicons from www.flaticon.com.
 * Icons made by Freepik from www.flaticon.com.
-
+* Photo by Agnieszka Kowalczyk on Unsplash.
 
 ## Future Enhancements
 
