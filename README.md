@@ -6,7 +6,7 @@
 
 ## Intro
 
-In the not-so-distant future...
+In the not-so-distant future... Your collections made simple.
 
 ## Languages Used
 
