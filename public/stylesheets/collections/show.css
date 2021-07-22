@@ -1,9 +1,13 @@
 main {
     display: flex;
-    justify-content: column;
     align-items: center;
+    justify-content: column;
+    flex-direction: column;
+    min-height: var(--min-view-height);
 }
+
 
 #album-art-pic {
     width:75px;
 }
+

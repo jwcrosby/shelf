@@ -17,6 +17,7 @@ In the not-so-distant future...
 ## Attributions
 
 * Icons made by Smashicons from www.flaticon.com.
+* Icons made by Freepik from www.flaticon.com.
 
 
 ## Future Enhancements

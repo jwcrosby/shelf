@@ -1,5 +1,44 @@
 main {
-    background-color: rgb(171,180,185);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: var(--min-view-height);
     color: rgb(0, 0, 0);
     background-size: 100vw;
+}
+
+body{
+    height: 100vh
+}
+
+#explore-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0 10px 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid black;
+}
+#header, #explore-image{
+    margin: 0 3px
+}
+
+#header {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 3.6rem;
+}
+
+#collection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 16px;
+}
+
+
+.card-img-top {
+    max-width: 200px;
 }

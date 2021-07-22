@@ -8,9 +8,10 @@
     <% if (profile.avatar) { %>
         <div>
             <img 
-                class="profile-avatar"
+                id="profile-avatar"
                 src="<%= profile.avatar %>"
                 alt="<%= profile.name %> avatar"
+                class="rounded-circle"
             >
         </div>
     <% } %>
@@ -20,25 +21,39 @@
     <a href="/collections/new">
         <button>➕Add a New Collection</button></a>
 
-    <% collections.forEach(collection => { %>
+        <% collections.forEach(collection => { %>
 
-        <div>
-                <h2>Name:  <%= collection.name %></h2>
-
-                <h3>Type: <%= collection.type %></h3>
+            <div class="card" style="width: 20rem;">
 
                 <a href="/collections/<%= collection._id %>">
-                <button>👀View</button></a>
+                    <img class="card-img-top" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
+                </a>
 
-                <form 
+                    <div class="card-body">
+
+                        <a href="/collections/<%= collection._id %>">
+                            <h4 class="card-title"><%= collection.name %></h4>
+                        </a>
+
+                        <h5 class="card-text">by <%= collection.owner.name %></h5>
+
+                        <h7 class="card-text-sub"><%= collection.type %></h7>
+                    
+                        <a href="/collections/<%= collection._id %>" class="btn btn-primary">View</a>
+
+                        <a href="/collections/<%= collection._id %>/edit">
+                            <button type="submit" class="btn btn-warning">Edit</button></a>
+
+                        <form 
                         action="/collections/<%= collection._id %>?_method=DELETE"
                         class="delete-form"
                         method="POST"
-                >
-                <button type="submit">❌Delete</button></form>
+                        >
+                        <button type="submit" class="btn btn-danger">Delete</button></form>
 
-        </div>
-        <% }) %>
+                    </div>
+                </div>
+            <% }) %>
 
 </main>
 

@@ -11,6 +11,8 @@ function show(req, res) {
         .then(profile => {
             //Find the collections associated with that profile
             Collection.find({ owner: profile._id })
+            .populate("records")
+            .populate("owner")
             .then(collections => {
                 //Then render
                 res.render("profiles/show", {

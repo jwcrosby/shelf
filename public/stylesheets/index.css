@@ -1,4 +1,8 @@
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-image: url("/images/background/agnieszka-kowalczyk-z-qxSYHXrh4-unsplash.jpg");
     background-color: #cccccc;
     color: rgb(255, 255, 255);
