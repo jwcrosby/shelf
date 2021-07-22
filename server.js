@@ -20,11 +20,12 @@ import('./config/passport.js')
 
 // require routes
 import { router as indexRouter } from './routes/index.js'
-import { router as authRouter } from './routes/auth.js'
-import { router as profilesRouter } from "./routes/profiles.js"
 import { router as apiRouter } from "./routes/api.js"
+import { router as authRouter } from './routes/auth.js'
 import { router as collectionsRouter } from "./routes/collections.js"
 import { router as exploreRouter } from "./routes/explore.js"
+import { router as homeRouter } from "./routes/home.js"
+import { router as profilesRouter } from "./routes/profiles.js"
 
 
 // view engine setup
@@ -67,11 +68,12 @@ app.use(passUserToView)
 
 // router middleware
 app.use('/', indexRouter)
-app.use('/auth', authRouter)
-app.use("/profiles", profilesRouter)
 app.use("/api", apiRouter)
+app.use('/auth', authRouter)
 app.use('/collections', collectionsRouter)
 app.use('/explore', exploreRouter)
+app.use('/home', homeRouter)
+app.use("/profiles", profilesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
