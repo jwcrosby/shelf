@@ -1,12 +1,10 @@
-# ReadMe in progress...
-
 ![SHELF](/public/images/readme/logo3.png/)
 
-# [Click here to launch site!](https://witte-shelf.herokuapp.com/)
+# [Click here to launch site.](https://witte-shelf.herokuapp.com/)
 
 ## Intro
 
-In the not-so-distant future... Your collections made simple.
+Your collections made simple.
 
 ## Languages Used
 
