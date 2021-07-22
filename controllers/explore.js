@@ -7,6 +7,8 @@ export {
 
 function index(req, res) {
     Collection.find({})
+    .populate("records")
+    .populate("owner")
     .then(collections => {
 
         res.render("explore/index", {
