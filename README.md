@@ -1,6 +1,6 @@
 # ReadMe in progress...
 
-![SHELF](/public/images/readme/logo2.png/)
+![SHELF](/public/images/readme/logo3.png/)
 
 # [Click here to launch site!](https://witte-shelf.herokuapp.com/)
 
