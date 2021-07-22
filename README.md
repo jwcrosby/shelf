@@ -13,10 +13,6 @@ In the not-so-distant future...
 * HTML
 * CSS
 * JavaScript
-
-* JavaScript
-* HTML
-* CSS
 * EJS
 * NodeJS
 * Express
