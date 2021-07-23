@@ -26,7 +26,7 @@ Your collections made simple.
 
 * Icons made by Smashicons from www.flaticon.com.
 * Icons made by Freepik from www.flaticon.com.
-* Photo by Agnieszka Kowalczyk on Unsplash.
+* Photo by Agnieszka Kowalczyk on www.unsplash.com.
 
 ## Future Enhancements
 
