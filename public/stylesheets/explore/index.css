@@ -59,7 +59,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 3px;
 }
 
 .collection-image {
@@ -76,6 +78,7 @@ body{
 
 .collection-title > a:visited {
     color: #54d1fa;
+    text-decoration: none;
 }
 
 #owner-box {

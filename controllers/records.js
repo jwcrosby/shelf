@@ -51,7 +51,7 @@ function show(req, res) {
     .then(record => {
         res.render("records/show", {
         record,
-        title: `${record.title}` | Shelf
+        title: `${record.title} | Shelf`
         })
     })
     .catch(err => {

@@ -105,6 +105,7 @@ body{
     justify-content: center;
     font-family: 'Noto Sans KR', sans-serif; 
     text-align: center;
+    margin: 0px 3px;
 } 
 
 .collection-image {
@@ -119,6 +120,7 @@ body{
 
 .collection-title > a:visited {
     color: #54d1fa;
+    text-decoration: none;
 }
 
 .collection-type {
@@ -129,5 +131,5 @@ body{
 
 #view-btn, #edit-btn, #delete-btn {
     margin: 0 3px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
