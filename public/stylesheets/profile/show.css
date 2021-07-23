@@ -18,7 +18,7 @@ body{
     justify-content: center;
     background-color: rgb(241,241,241);
     color: rgb(0, 0, 0);
-    margin: 16px 0 0 0;
+    margin: 18px 0 4px 0;
     padding: 7px;
     width: 28vw;
     border-radius: 10px;
@@ -96,7 +96,7 @@ body{
     width: 90vw;
     margin: 0 0 0 0;
     padding: 13px 0;
-    border-bottom: 1px solid rgba(63, 111, 131, 0.64);
+    border-bottom: 1px solid rgba(57, 96, 113, 0.64);
 }
 
 .line-elements {

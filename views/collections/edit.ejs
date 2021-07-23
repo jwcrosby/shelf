@@ -3,18 +3,63 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1>Edit: <%= collection.name  %></h1>
-    <form 
-    id="edit-form" 
-    action="/collections/<%= collection._id %>?_method=PUT"
-    method="POST"
-    autocomplete="off">
+    <body>
+        <div id="return-to-profile-header">
+            <a href="/profiles/me">
+                <h3 id="return-to-profile-text">Return to "My Profile"</h3></a>
+        </div>
 
-        <label for="name-input">Collection Name:</label>
-            <input type="text" name="name" id="name-input" value=<%= collection.name %>>
+        <div id="edit-collection-header">
+            <h1 class="header-text" id="title-header">Edit: <%= collection.name %></h1>
 
-        <button type="submit">Edit Collection</button>
-    </form>
+            <img
+            id="edit-collection-icon"
+            src="/images/icons/pencil.png"
+            alt="edit collection header image"
+            />
+        </div>
+
+        <div>
+
+            <form 
+            id="edit-form" 
+            action="/collections/<%= collection._id %>?_method=PUT"
+            method="POST"
+            autocomplete="off">
+
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="name-input" class="field-tabel-text">Name:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="name" id="name-input" class="input-field" value="<%= collection.name %>">
+                    </div>
+                </div>
+
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="type-select" class="field-tabel-text">Artist/Author:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <select name="type" id="type-select" class="input-field" value=<%= collection.type %>>
+                            <option value="Books">Books</option>
+                            <option value="Comics">Comics</option>
+                            <option value="CDs">CDs</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Tapes">Tapes</option>
+                            <option value="Video Games">Video Games</option>
+                            <option value="Vinyl Records">Vinyl Records</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="save-button-container">
+                    <button type="submit" id="save-button" class="btn btn-success">Edit Collection</button>
+                </div>
+            </form>
+        </div>
+    </body>
 </main>
 
 <%- include('../partials/footer') %>

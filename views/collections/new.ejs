@@ -3,30 +3,63 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1>Add a New Collection</h1>
-    <form 
-    id="new-form" 
-    action="/collections" 
-    method="POST"
-    autocomplete="off">
+    <body>
+        <div id="return-to-profile-header">
+            <a href="/profiles/me">
+                <h3 id="return-to-profile-text">Return to "My Profile"</h3></a>
+        </div>
 
-        <label for="name-input">Collection Name:</label>
-            <input type="text" name="name" id="name-input">
+        <div id="add-collection-header">
+            <h1 class="header-text" id="title-header">Add a New Collection</h1>
 
-        <label for="type-select">Collection Type:</label>
-        <select name="type" id="type-select">
-            <option value="Books">Books</option>
-            <option value="Comics">Comics</option>
-            <option value="CDs">CDs</option>
-            <option value="Movies">Movies</option>
-            <option value="Tapes">Tapes</option>
-            <option value="Video Games">Video Games</option>
-            <option value="Vinyl Records">Vinyl Records</option>
-            <option value="Other">Other</option>
-        </select>
+            <img
+            id="add-collection-icon"
+            src="/images/icons/add.png"
+            alt="add a new collection header image"
+            />
+        </div>
 
-        <button type="submit">Add Collection</button>
-    </form>
+        <div>
+
+            <form 
+            id="new-form" 
+            action="/collections" 
+            method="POST"
+            autocomplete="off">
+
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="name-input" class="field-tabel-text">Name:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="name" id="name-input" class="input-field">
+                    </div>
+                </div>
+
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="type-select" class="field-tabel-text">Artist/Author:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <select name="type" id="type-select" class="input-field">
+                            <option value="Books">Books</option>
+                            <option value="Comics">Comics</option>
+                            <option value="CDs">CDs</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Tapes">Tapes</option>
+                            <option value="Video Games">Video Games</option>
+                            <option value="Vinyl Records">Vinyl Records</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="save-button-container">
+                    <button type="submit" id="save-button" class="btn btn-success">Add Collection to Shelf</button>
+                </div>
+            </form>
+        </div>
+    </body>
 </main>
 
 <%- include('../partials/footer') %>
