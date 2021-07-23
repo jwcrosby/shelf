@@ -88,8 +88,8 @@ body{
     align-items: center;
     justify-content: center;
     width: 90vw;
-    padding: 12px 0;
-    border-bottom: 1px solid rgb(90, 148, 101);
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(63, 111, 131, 0.64);
 }
 
 .line-elements {
