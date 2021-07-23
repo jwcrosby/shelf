@@ -6,6 +6,10 @@
 
 Your collections made simple.
 
+## Screenshots
+
+![DESKTOP SCREENSHOT](/images/readme/desktop.jpg/) 
+
 ## Languages Used
 
 * HTML
@@ -28,9 +32,6 @@ Your collections made simple.
 * Icons made by Freepik from www.flaticon.com.
 * Photo by Agnieszka Kowalczyk on www.unsplash.com.
 
-## Screenshots
-
-[DESKTOP SCREENSHOT](/images/readme/desktop.jpg/) 
 
 ## Future Enhancements
 
