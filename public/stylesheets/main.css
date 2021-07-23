@@ -79,6 +79,10 @@ nav {
   color: rgb(241,241,241);
 }
 
+#logout-button {
+  font-size: 1.4rem;
+}
+
 #profile-pic {
   border-radius: 50%;
   width: 46px;
@@ -88,7 +92,7 @@ h1 {
   font-size: 3.6rem;
 }
 
-footer{
+footer {
   background-color: #323232;
   display: flex;
   align-items: center;

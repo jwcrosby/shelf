@@ -43,7 +43,7 @@ body{
 }
 
 #my-profile-icon {
-    height: 50px;
+    height: 45px;
 }
 
 #my-profile-name {
@@ -110,16 +110,17 @@ body{
     color: #54d1fa;
     text-decoration: none;
     font-size: 1.7rem;
+    text-align: center;
+}
+
+.collection-title > a:visited {
+    color: #54d1fa;
 }
 
 .collection-type {
     color: rgb(241,241,241);
     text-decoration: none;
     font-size: 1.6rem;
-}
-
-.collection-title > a:visited {
-    color: #54d1fa;
 }
 
 #view-btn, #edit-btn, #delete-btn {
