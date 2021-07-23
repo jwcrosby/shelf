@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 
-#return-to-record-header {
+#return-to-collection-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,13 +20,13 @@ body{
     text-decoration: none;
 }
 
-#return-to-record-text {
+#return-to-collection-text {
     color: #54d1fa;
     text-decoration: none;
     margin: 0;
 }
 
-#return-to-record-text > a:visited {
+#return-to-collection-text > a:visited {
     color: #54d1fa;
     text-decoration: none;
 }
@@ -75,18 +75,18 @@ body{
 }
 
 .input-field {
-    width: 58vw;
-    padding: 8px 15px;
+    width: 56vw;
+    padding: 6px 12px;
     margin: 4px 0 8px;
     font-family: 'Noto Sans KR', sans-serif; 
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .field-tabel-text {
     text-decoration: underline;
     font-family: 'Rubik', sans-serif;
     padding: 5px;
-    font-size: 1.5rem;  
+    font-size: 1.6rem;  
 }
 
 .record-details-text {
@@ -125,5 +125,22 @@ body{
 
 #notes-input {
     height: 125px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+}
+
+#image-url-input {
+    font-size: 1.4rem;
+}
+
+#save-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-top: 10px;
+}
+
+#save-button {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 1.4rem;
 }

@@ -4,13 +4,13 @@
 
 <main>
     <body>
-        <div id="return-to-record-header">
+        <div id="return-to-collection-header">
             <a href="/collections/<%= collection._id %>">
-                <h3 id="return-to-record-text">Return to "<%= collection.name %>"</h3></a>
+                <h3 id="return-to-collection-text">Return to "<%= collection.name %>"</h3></a>
         </div>
 
         <div id="add-record-header">
-            <h1 class="header-text" id="title-header">Add a New Record</h1>
+            <h1 class="header-text" id="title-header">Add a New Item</h1>
 
             <img
             id="add-record-icon"
@@ -72,8 +72,9 @@
                     </div>
                 </div>
 
-                    <button type="submit" class="btn btn-success">Add Item to Collection</button>
-
+                <div id="save-button-container">
+                    <button type="submit" id="save-button" class="btn btn-success">Add Item to Collection</button>
+                </div>
             </form>
         </div>
     </body>

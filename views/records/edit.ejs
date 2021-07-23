@@ -3,39 +3,82 @@
 <%- include('../partials/nav') %>
 
 <main>
+    <body>
+        <div id="return-to-collection-header">
+            <a href="/collections/<%= record.collectionParent._id %>">
+                <h3 id="return-to-collection-text">Return to "<%= record.collectionParent.name %>"</h3></a>
+        </div>
 
-    <a href="/collections/<%= record.collectionParent._id %>">
-        <h3> Return to <%= record.collectionParent.name %></h3></a>
+        <div id="edit-record-header">
+            <h1 class="header-text" id="title-header">Edit: <%= record.title %></h1>
 
-    <h1>Edit: <%= record.title %></h1>
-    
-    <form 
-        id="edit-record-form" 
-        action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=PUT"
-        method="POST"
-        autocomplete="off">
+            <img
+            id="edit-record-icon"
+            src="/images/icons/pencil.png"
+            alt="edit record header image"
+            />
+        </div>
 
-        <label for="title-input">Title:</label>
-            <input type="text" name="title" id="title-input"  value="<%= record.title %>" >
+        <div>
 
-        <label for="author-input">Artist/Author:</label>
-            <input type="text" name="author" id="author-input" value="<%= record.author %>">
+            <form 
+                id="edit-record-form" 
+                action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=PUT"
+                method="POST"
+                autocomplete="off">
 
-        <label for="release-date">Release Date:</label>
-            <input type="date" name="releaseDate" id="release-date" value="<%= record.releaseDate %>">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="title-input" class="field-tabel-text">Title:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="title" id="title-input" class="input-field" value="<%= record.title %>">
+                    </div>
+                </div>
 
-        <label for="notes-input">Notes:</label>
-            <input type="text" name="notes" id="notes-input" value="<%= record.notes %>">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="author-input" class="field-tabel-text">Artist/Author:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="author" id="author-input" class="input-field" value="<%= record.author %>">
+                    </div>
+                </div>
 
-        <label for="image-url-input">Image URL:</label>
-            <input type="text" name="imageUrl" id="image-url-input" value="<%= record.imageUrl %>">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="release-date" class="field-tabel-text">Release Date:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="date" name="releaseDate" id="release-date" class="input-field" value="<%= record.releaseDate %>">
+                    </div>
+                </div>
 
-        <button type="submit">Edit Record</button>
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="notes-input" class="field-tabel-text">Notes:</label>
+                    </div>
+                        <div class="field-containers-input-field">
+                        <input type="text" name="notes" id="notes-input" class="input-field" value="<%= record.notes %>">
+                    </div>
+                </div>
 
-    </form>
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="image-url-input" class="field-tabel-text">Image URL:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="imageUrl" id="image-url-input" class="input-field" value="<%= record.imageUrl %>">
+                    </div>
+                </div>
 
-    <%= // %>
+                <div id="save-button-container">
+                    <button type="submit" id="save-button" class="btn btn-success">Save Edit</button>
+                </div>
 
+            </form>
+        </div>
+    </body>
 </main>
 
 <%- include('../partials/footer') %>

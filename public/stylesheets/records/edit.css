@@ -8,5 +8,139 @@ main {
 }
 
 body{
-    height: 100vh
+    height: 100vh;
+}
+
+#return-to-collection-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+#return-to-collection-text {
+    color: #54d1fa;
+    text-decoration: none;
+    margin: 0;
+}
+
+#return-to-collection-text > a:visited {
+    color: #54d1fa;
+    text-decoration: none;
+}
+
+#edit-record-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+#title-header {
+    margin: 0 4px;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 3rem;
+}
+
+#edit-record-icon {
+    height: 41px;
+    margin: 0 4px;
+}
+
+.field-containers {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.field-containers-label {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.field-containers-input-field {
+    width: 59vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
+.input-field {
+    width: 56vw;
+    padding: 6px 12px;
+    margin: 4px 0 8px;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 1.4rem;
+}
+
+.field-tabel-text {
+    text-decoration: underline;
+    font-family: 'Rubik', sans-serif;
+    padding: 5px;
+    font-size: 1.5rem;  
+}
+
+.record-details-text {
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+#record-title {
+    font-size: 3rem;
+}
+
+
+#record-edit-btn, #record-delete-btn {
+    margin: 0 3px;
+    font-size: 1.1rem;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    margin: 5px;
+}
+
+#record-author{
+    font-size: 2.6rem;  
+}
+
+#record-release-date{
+    font-size: 2.1rem;
+}
+
+#record-notes {
+    font-size: 1.7rem;
+}
+
+#notes-input {
+    height: 125px;
+    font-size: 1.4rem;
+}
+
+#image-url-input {
+    font-size: 1.4rem;
+}
+
+#save-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-top: 10px;
+}
+
+#save-button {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 1.4rem;
 }
