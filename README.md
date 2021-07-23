@@ -2,10 +2,6 @@
 
 # [Click here to launch site.](https://witte-shelf.herokuapp.com/)
 
-## Intro
-
-Your collections made simple.
-
 ## Screenshots
 
 ![DESKTOP SCREENSHOT](/public/images/readme/desktop2.png/) 
