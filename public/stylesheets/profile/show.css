@@ -42,6 +42,12 @@ body{
     font-size: 3rem;
 }
 
+#profile-header-text {
+    margin: 0 4px;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 2.8rem;
+}
+
 #my-profile-icon {
     height: 45px;
 }
