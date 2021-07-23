@@ -1,0 +1,128 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: var(--min-view-height);
+    color: rgb(241,241,241);
+    background-size: 100vw;
+}
+
+body{
+    height: 100vh
+}
+
+#my-profile-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241,241,241);
+    color: rgb(0, 0, 0);
+    margin: 15px 0 0 0;
+    padding: 7px;
+    width: 33vw;
+    border-radius: 10px;
+}
+
+#my-profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+    /* border-bottom: 2px solid rgb(90, 148, 101); */
+}
+
+.header-text, #my-profile-icon {
+    margin: 0 4px
+}
+
+.header-text {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 3rem;
+}
+
+#my-profile-icon {
+    height: 50px;
+}
+
+#my-profile-name {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 1.9rem;
+}
+
+#my-profile-avatar {
+    margin: 8px 0 4px;
+    height: 95px;
+}
+
+#my-shelf-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding-bottom: 12px;
+}
+
+#my-shelf-icon {
+    height: 50px;
+    margin: 0 4px;
+}
+
+#add-button {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.4rem;
+}
+
+#collection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Rubik', sans-serif;
+}
+
+#individual-collection-container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 0 0 0;
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(90, 148, 101);
+}
+
+.line-elements {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif; 
+} 
+
+.collection-image {
+    height: 90px;
+}
+
+.collection-title {
+    color: #54d1fa;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.collection-type {
+    color: rgb(241,241,241);
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.collection-title > a:visited {
+    color: #54d1fa;
+}
+
+#view-btn, #edit-btn, #delete-btn {
+    margin: 0 3px;
+    font-size: 1.4rem;
+}

@@ -50,7 +50,7 @@ body{
     justify-content: center;
     width: 90vw;
     margin: 0 0 0 0;
-    padding: 8px 0;
+    padding: 12px 0;
     border-bottom: 1px solid rgb(90, 148, 101);
 }
 
@@ -66,14 +66,14 @@ body{
 }
 
 .collection-title {
-    color: rgb(241,241,241);
+    color: #54d1fa;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif; 
     font-size: 1.7rem;
 }
 
 .collection-title > a:visited {
-    color: rgb(241,241,241);
+    color: #54d1fa;
 }
 
 #owner-box {
