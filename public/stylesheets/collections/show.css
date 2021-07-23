@@ -53,7 +53,7 @@ body{
 #collection-type {
     font-family: 'Rubik', sans-serif;
     font-size: 2.1rem;
-    margin-bottom: 1px;
+    margin: 2px;
 }
 
 #record-add-btn, #collection-edit-btn, #collection-delete-btn {
@@ -72,7 +72,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-    margin: 5px;
+    margin: 7px;
 }
 
 #record-container {
