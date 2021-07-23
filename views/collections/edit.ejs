@@ -32,7 +32,7 @@
                         <label for="name-input" class="field-tabel-text">Name:</label>
                     </div>
                     <div class="field-containers-input-field">
-                        <input type="text" name="name" id="name-input" class="input-field" value="<%= collection.name %>">
+                        <input type="text" name="name" id="name-input" class="input-field" value="<%= collection.name %>" placeholder="Name">
                     </div>
                 </div>
 
@@ -41,15 +41,16 @@
                         <label for="type-select" class="field-tabel-text">Artist/Author:</label>
                     </div>
                     <div class="field-containers-input-field">
-                        <select name="type" id="type-select" class="input-field" value=<%= collection.type %>>
-                            <option value="Books">Books</option>
-                            <option value="Comics">Comics</option>
-                            <option value="CDs">CDs</option>
-                            <option value="Movies">Movies</option>
-                            <option value="Tapes">Tapes</option>
-                            <option value="Video Games">Video Games</option>
-                            <option value="Vinyl Records">Vinyl Records</option>
-                            <option value="Other">Other</option>
+                        <select name="type" id="type-select" class="input-field" value="<%= collection.type %>">
+                            <option value="none" selected disabled hidden>Select a Type</option>
+                            <option value="Books" <%- (collection.type=="Books") ? "selected" : null %> >Books</option>
+                            <option value="Comics" <%- (collection.type=="Comics") ? "selected" : null %> >Comics</option>
+                            <option value="CDs" <%- (collection.type=="CDs") ? "selected" : null %> >CDs</option>
+                            <option value="Movies" <%- (collection.type=="Movies") ? "selected" : null %>>Movies</option>
+                            <option value="Tapes" <%- (collection.type=="Tapes") ? "selected" : null %>>Tapes</option>
+                            <option value="Video Games" <%- (collection.type=="Video Games") ? "selected" : null %>>Video Games</option>
+                            <option value="Vinyl Records" <%- (collection.type=="Vinyl Records") ? "selected" : null %>>Vinyl Records</option>
+                            <option value="Other" <%- (collection.type=="Other") ? "selected" : null %>>Other</option>
                         </select>
                     </div>
                 </div>
