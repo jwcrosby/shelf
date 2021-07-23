@@ -19,6 +19,8 @@ Your collections made simple.
 * Express
 * MongoDB
 * Mongoose
+* PassportJS
+* Google OAuth
 
 ## Attributions
 
