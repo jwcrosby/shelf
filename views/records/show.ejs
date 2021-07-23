@@ -3,34 +3,63 @@
 <%- include('../partials/nav') %>
 
 <main>
+    <body>
+        <div id="return-to-collection-header">
+            <a href="/collections/<%= record.collectionParent._id %>">
+                <h3 id="return-to-collection-text">Return to <%= record.collectionParent.name %></h3></a>
+        </div>
 
-    <a href="/collections/<%= record.collectionParent._id %>">
-        <h3> Return to <%= record.collectionParent.name %></h3></a>
-
-    <img 
-        src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
-        alt="album"
-        id="album-art-pic"
+        <img 
+            src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
+            alt="album"
+            id="record-image"
         >
 
-    <h1><%= record.title %></h1>
+        <div id="button-container">
+            <a href="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>/edit" class="btn btn-warning" id="record-edit-btn">Edit</button></a>
 
-    <a href="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>/edit">
-        <button type="submit">✏️</button></a>
+            <form 
+            action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=DELETE"
+            class="delete-form"
+            method="POST"
+            >
+                <button type="submit" id="record-delete-btn" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
 
-    <form 
-    action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=DELETE"
-    class="delete-form"
-    method="POST">
-        <button type="submit">❌</button>
-    </form>
+        <div class="record-sub-headers">
+            <h4 class="record-sub-headers-text">Title:</h4>
+        </div>
 
-    <h2><%= record.author %></h2>
+        <div class="record-detail-containers">
+            <h1 id="record-title" class="record-details-text"><%= record.title %></h1>
+        </div>
 
-    <h2><%= record.releaseDate ? record.releaseDate.toLocaleDateString('en-US', {}) : null %></h2>
+        <div class="record-sub-headers">
+            <h4 class="record-sub-headers-text">Artist/Author:</h4>
+        </div>
 
-    <h2><%= record.notes %></h2>
+        <div class="record-detail-containers">
+            <h2 id="record-author" class="record-details-text"><%= record.author %></h2>
+        </div>
 
+        <div class="record-sub-headers">
+            <h4 class="record-sub-headers-text">Date:</h4>
+        </div>
+
+        <div class="record-detail-containers">
+            <h2 id="record-release-date" class="record-details-text"><%= record.releaseDate ? record.releaseDate.toLocaleDateString('en-US', {}) : null %></h2>
+        </div>
+
+        <div class="record-sub-headers">
+            <h4 class="record-sub-headers-text">Notes:</h4>
+        </div>
+
+        <div class="record-detail-containers">
+            <h2 id="record-notes" class="record-details-text"><%= record.notes %></h2>
+        </div>
+
+    </body>
 </main>
 
 <%- include('../partials/footer') %>

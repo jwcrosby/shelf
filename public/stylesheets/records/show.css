@@ -5,8 +5,80 @@ main {
     min-height: var(--min-view-height);
     color: rgb(241,241,241);
     background-size: 100vw;
+    font-family: 'Rubik', sans-serif;
 }
 
 body{
     height: 100vh;
+}
+
+#return-to-collection-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+#return-to-collection-text {
+    color: #54d1fa;
+    text-decoration: none;
+    margin: 0;
+}
+
+#return-to-collection-text > a:visited {
+    color: #54d1fa;
+    text-decoration: none;
+}
+
+#record-image {
+    height: 250px;
+    margin: 12px;
+}
+
+.record-sub-headers {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    text-decoration: underline;
+}
+
+.record-sub-headers-text {
+    font-size: 1.7rem;  
+}
+
+.record-details-text {
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+#record-title {
+    font-size: 3rem;
+}
+
+#record-edit-btn, #record-delete-btn {
+    margin: 0 3px;
+    font-size: 1.1rem;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    margin: 5px;
+}
+
+#record-author{
+    font-size: 2.6rem;  
+}
+
+#record-release-date{
+    font-size: 2.1rem;
+}
+
+#record-notes {
+    font-size: 1.7rem;
 }
