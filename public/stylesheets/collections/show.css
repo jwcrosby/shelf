@@ -1,13 +1,65 @@
 main {
     display: flex;
     align-items: center;
-    justify-content: column;
     flex-direction: column;
     min-height: var(--min-view-height);
+    color: rgb(241,241,241);
+    background-size: 100vw;
 }
 
+body{
+    height: 100vh
+}
+
+#collection-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding-bottom: 12px;
+}
+
+#collection-name {
+    margin: 0 4px;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 3rem;
+}
+
+#my-collection-icon {
+    height: 45px;
+    margin: 0 4px;
+}
+
+#record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Rubik', sans-serif;
+}
+
+#individual-record-container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 0 0 0;
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(90, 148, 101);
+}
+
+.line-elements {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif; 
+    text-align: center;
+} 
 
 #album-art-pic {
-    width:75px;
+    height: 90px;
 }
 

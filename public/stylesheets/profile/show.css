@@ -33,13 +33,10 @@ body{
     /* border-bottom: 2px solid rgb(90, 148, 101); */
 }
 
-.header-text, #my-profile-icon {
-    margin: 0 4px
-}
-
 .header-text {
     font-family: 'Noto Sans KR', sans-serif; 
     font-size: 3rem;
+    margin: 0 4px;
 }
 
 #profile-header-text {
@@ -50,6 +47,7 @@ body{
 
 #my-profile-icon {
     height: 45px;
+    margin: 0 4px;
 }
 
 #my-profile-name {
@@ -106,6 +104,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Noto Sans KR', sans-serif; 
+    text-align: center;
 } 
 
 .collection-image {
@@ -116,7 +115,6 @@ body{
     color: #54d1fa;
     text-decoration: none;
     font-size: 1.7rem;
-    text-align: center;
 }
 
 .collection-title > a:visited {

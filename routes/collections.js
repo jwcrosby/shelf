@@ -29,7 +29,7 @@ router.post("/:collectionId/records", isLoggedIn, recordsCtrl.create)
 
 router.get("/:collectionId/records/:recordId", isLoggedIn, recordsCtrl.show)
 
-router.get("/:collectionId/records/:recordId/edit", isLoggedIn, recordsCtrl.edit)
+router.get("/:collectionId/records/:recordId/edit", recordsCtrl.edit)
 
 router.put("/:collectionId/records/:recordId", isLoggedIn, recordsCtrl.update)
 

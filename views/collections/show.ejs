@@ -3,62 +3,90 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <div>
-        <a href="/profiles/me">
-            <h3>Return to "My Profile"</h3></a>
+    <body>
+        <div id="return-to-profile-header">
+            <a href="/profiles/me">
+                <h3>Return to "My Profile"</h3></a>
+        </div>
 
-        <h1>Name: <%= collection.name %></h1>
+        <div id="collection-name-header">
+            <h1 class="header-text" id="collection-name"> <%= collection.name %></h1>
 
-        <h2>Type: <%= collection.type %></h2>
+            <img
+            id="my-collection-icon"
+            src="/images/icons/album.png"
+            alt="my collection header image"
+            />
+        </div>
 
-        <a href="/collections/<%= collection._id %>/records/new">
-            <button type="submit">➕Add New Record</button></a>
+        <h2 id="collection-type"><%= collection.type %></h2>
 
-        <a href="/collections/<%= collection._id %>/edit">
-            <button type="submit">✏️Edit</button></a>
+            <a href="/collections/<%= collection._id %>/records/new">
+                <button type="submit" class="btn btn-success" id="add-button">➕Add New Record</button></a>
 
-        <form 
-                action="/collections/<%= collection._id %>?_method=DELETE"
-                class="delete-form"
-                method="POST"
-        >
-        <button type="submit">❌Delete</button></form>
+            <a href="/collections/<%= collection._id %>/edit">
+                <button type="submit" class="btn btn-warning" id="edit-btn">✏️Edit</button></a>
 
-    </div>
-    <div>
-        
-        <h2>Records in this Collection</h2>
+            <form 
+                    action="/collections/<%= collection._id %>?_method=DELETE"
+                    class="delete-form"
+                    method="POST"
+            >
+            <button type="submit" class="btn btn-danger" id="delete-btn">❌Delete</button></form>
 
-        <% collection.records.forEach(record => { %>
+        </div>
+        <div>
 
-        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
-            <img 
-                src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
-                alt="album"
-                id="album-art-pic"
-        ></a>
-        
-        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
-            <h3> <%= record.title %> </h3></a>
+            <div id="record-container">
 
-        <h4><%= record.author %></h4>
+                <% collection.records.forEach(record => { %>
 
-        <h4><%= record.releaseDate.toLocaleDateString('en-US', {}) %></h4>
+                <div id="individual-record-container">
 
-        <h4><%= record.notes %></h4>
+                    <div class="line-elements">
+                        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
+                            <img 
+                                src="<%= record.imageUrl ? record.imageUrl : "/images/icons/imageUrlHold.png" %>" 
+                                alt="album"
+                                id="album-art-pic"
+                        ></a>
+                    </div>
 
-        <a href="/collections/<%= collection._id %>/records/<%= record._id %>/edit">
-            <button type="submit">✏️</button></a>
+                    <div class="line-elements">
+                        <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="logo-link">
+                            <h3> <%= record.title %> </h3></a>
+                    </div>
 
-        <form 
-        action="/collections/<%= collection._id %>/records/<%= record._id %>?_method=DELETE"
-        class="delete-form"
-        method="POST">
-            <button type="submit">❌</button>
-        </form>
+                    <div class="line-elements">
+                        <h4><%= record.author %></h4>
+                    </div>
 
-        <% }) %>
-    </div>
+                    <div class="line-elements">
+                        <h4><%= record.releaseDate.toLocaleDateString('en-US', {}) %></h4>
+                    </div>
+
+                    <div class="line-elements">
+                        <h4><%= record.notes %></h4>
+                    </div>
+
+                    <div class="line-elements" id="record-button-container">
+
+                            <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="btn btn-primary" id="view-btn">View</a>
+
+                            <a href="/collections/<%= collection._id %>/records/<%= record._id %>/edit" class="btn btn-warning" id="edit-btn">Edit</button></a>
+
+                        <form 
+                        action="/collections/<%= collection._id %>/records/<%= record._id %>?_method=DELETE"
+                        class="delete-form"
+                        method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </body>
 </main>
 
 <%- include('../partials/footer') %>

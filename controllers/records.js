@@ -45,9 +45,9 @@ function create(req, res) {
 }
 
 function show(req, res) {
+
     Record.findById(req.params.recordId)
     .populate("collectionParent")
-    
     .then(record => {
         res.render("records/show", {
         record,
