@@ -28,10 +28,6 @@ Your collections made simple.
 * Icons made by Freepik from www.flaticon.com.
 * Photo by Agnieszka Kowalczyk on www.unsplash.com.
 
-## [Click here to view Trello board.](https://trello.com/b/J4vWbsYa/shelf/)
-
 ## Future Enhancements
 
-- [ ] Mobile responsiveness
-- [ ] The ability to add comments to other Profile's Shelfs
-- [ ] Like Button
+[Click here to view Ice Box Trello board.](https://trello.com/b/J4vWbsYa/shelf/)
