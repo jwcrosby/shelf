@@ -1,0 +1,132 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: var(--min-view-height);
+    color: rgb(241,241,241);
+    background-size: 100vw;
+}
+
+body{
+    height: 100vh
+}
+
+#return-to-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    text-decoration: none;
+    margin-bottom: 2px;
+}
+
+#return-to-profile-text {
+    color: #54d1fa;
+    text-decoration: none;
+    margin: 0;
+}
+
+#return-to-profile-text > a:visited {
+    color: #54d1fa;
+    text-decoration: none;
+}
+
+#collection-name-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#collection-name {
+    margin: 0 4px;
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 3rem;
+}
+
+#my-collection-icon {
+    height: 45px;
+    margin: 0 4px;
+}
+
+#collection-type {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 2.1rem;
+    margin: 2px;
+}
+
+#record-add-btn, #collection-edit-btn, #collection-delete-btn {
+    font-family: 'Rubik', sans-serif;
+    margin: 0 3px;
+    font-size: 1rem;
+}
+
+#record-add-btn {
+    font-size: 1.4rem;
+    margin-top: 2px;
+}
+
+#collection-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    margin: 7px;
+}
+
+#record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Rubik', sans-serif;
+}
+
+#individual-record-container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(57, 96, 113, 0.64);
+}
+
+.line-elements {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif; 
+    text-align: center;
+    margin: 0px 3px;
+} 
+
+#album-art-pic {
+    height: 90px;
+}
+
+#record-title {
+    color: #54d1fa;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+#record-title > a:visited {
+    color: #54d1fa;
+    text-decoration: none;
+}
+
+#record-author, #record-date {
+    font-size: 1.6rem;
+}
+
+#record-notes {
+    font-size: 1.4rem;
+}
+
+#record-view-btn, #record-edit-btn, #record-delete-btn {
+    margin: 0 3px;
+    font-size: 1.3rem;
+}

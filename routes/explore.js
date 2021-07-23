@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import * as exploreCtrl from "../controllers/explore.js"
-import { isLoggedIn } from '../middleware/middleware.js'
+import * as collectionsCtrl from "../controllers/collections.js"
 
 export {
     router
@@ -9,3 +9,5 @@ export {
 const router = Router()
 
 router.get('/', exploreCtrl.index)
+
+router.get("/:profileId/:collectionId", exploreCtrl.show)

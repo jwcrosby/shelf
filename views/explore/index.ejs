@@ -25,13 +25,13 @@
         <div id="individual-collection-container">
 
           <div class="line-elements">
-            <a href="/collections/<%= collection._id %>">
+            <a href="/explore/<%= collection.owner._id %>/<%= collection._id %>">
               <img class="collection-image" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
             </a>
           </div>
 
           <div class="line-elements">
-            <a href="/collections/<%= collection._id %>">
+            <a href="/explore/<%= collection.owner._id %>/<%= collection._id %>">
               <h4 class="collection-title"><%= collection.name %></h4>
             </a>
           </div>
@@ -61,7 +61,7 @@
           </div>
 
           <div class="line-elements">
-            <a href="/collections/<%= collection._id %>" id="view-element-btn" class="btn btn-primary">View</a>
+            <a href="/explore/<%= collection.owner._id %>/<%= collection._id %>" id="view-element-btn" class="btn btn-primary">View</a>
           </div>
 
         </div>

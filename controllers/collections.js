@@ -1,4 +1,5 @@
 import { Collection } from '../models/collection.js'
+import { Profile } from "../models/profile.js"
 
 export {
     newCollection as new,
@@ -29,20 +30,20 @@ function create(req, res) {
 }
 
 function show(req, res) {
-    Collection.findById(req.params.collectionId)
-    .populate("records")
-    .populate("owner")
-    
-    .then(collection => {
-        res.render('collections/show', {
-        collection,
-        title: `${collection.name} | Shelf`
-        })
-    })
-    .catch(err => {
-        console.log(err)
-        res.redirect('/error')
-    })
+            Collection.findById(req.params.collectionId)
+            .populate("records")
+            .populate("owner")
+            
+            .then(collection => {
+                res.render('collections/show', {
+                collection,
+                title: `${collection.name} | Shelf`,
+                })
+            })
+            .catch(err => {
+                console.log(err)
+                res.redirect('/error')
+            })
 }
 
 function deleteCollection(req, res) {
