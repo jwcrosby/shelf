@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: rgb(191, 205, 211);
+  background-color: rgb(34, 34, 38);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -54,7 +54,7 @@ nav {
 
 #logo-pic {
   height: 40px;
-  margin: 5px 0px 12px 14px;
+  margin: 5px 0px 12px 15px;
 }
 
 #nav-right {
@@ -69,7 +69,7 @@ nav {
 #nav-right > a {
   color: rgb(241,241,241);
   text-decoration: none;
-  margin: 5px 14px 5px 0px;
+  margin: 5px 15px 5px 0px;
 }
 
 #nav-right > a:hover {
@@ -90,11 +90,11 @@ h1 {
 }
 
 footer{
-
-  background-color: rgb(40,42,53);
+  background-color: rgb(34, 34, 38);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 4px 0;
 }
 
 #footer-div {

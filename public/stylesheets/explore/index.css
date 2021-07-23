@@ -3,7 +3,7 @@ main {
     align-items: center;
     flex-direction: column;
     min-height: var(--min-view-height);
-    color: rgb(0, 0, 0);
+    color: rgb(241,241,241);
     background-size: 100vw;
 }
 
@@ -16,17 +16,22 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 12px 0 10px 0;
+    margin: 20px 0 0 0;
     padding-bottom: 12px;
-    border-bottom: 3px solid black;
+    /* border-bottom: 2px solid rgb(90, 148, 101); */
 }
-#header, #explore-image{
+
+#header, #explore-image {
     margin: 0 3px
+}
+
+#explore-image {
+    height: 50px
 }
 
 #header {
     font-family: 'Noto Sans KR', sans-serif; 
-    font-size: 3.6rem;
+    font-size: 3rem;
 }
 
 #collection-container {
@@ -42,26 +47,33 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    width: 87vw;
-    margin: 10px 0;
-    padding: 20px 0;
-    border-bottom: 1px solid black;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 0 0 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(90, 148, 101);
+}
+
+.line-elements {
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .collection-image {
-    max-width: 90px;
+    height: 90px;
 }
 
 .collection-title {
-    color: rgb(0, 0, 0);
+    color: rgb(241,241,241);
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif; 
-    font-size: 2.5rem;
+    font-size: 1.7rem;
 }
 
 .collection-title > a:visited {
-    color: rgb(0, 0, 0);
+    color: rgb(241,241,241);
 }
 
 #owner-box {
@@ -72,8 +84,15 @@ body{
 }
 
 #collection-owner-image {
-    max-width: 60px;
+    max-width: 65px;
+    padding: 5px;
 }
+
 #collection-owner-name {
-    margin-top: 2px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+#view-element-btn {
+    font-size: 1.4rem;
 }

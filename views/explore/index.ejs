@@ -14,7 +14,6 @@
       id="explore-image"
       src="/images/icons/search.png"
       alt="explore header image"
-      width="8%"
       />
 
     </div>
@@ -25,17 +24,19 @@
 
         <div id="individual-collection-container">
 
-          <a href="/collections/<%= collection._id %>">
-            <img class="collection-image" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
-          </a>
+          <div class="line-elements">
+            <a href="/collections/<%= collection._id %>">
+              <img class="collection-image" src="<%= collection.records.length ? collection.records[0].imageUrl : "/images/icons/imageUrlHold.png"%>" alt="Card image cap" >
+            </a>
+          </div>
 
-          <a href="/collections/<%= collection._id %>">
-              <h4 class="collection-title"><%= collection.name %></h4>
-          </a>
+          <div class="line-elements">
+            <a href="/collections/<%= collection._id %>">
+                <h4 class="collection-title"><%= collection.name %></h4>
+            </a>
+          </div>
 
-          <!-- <h7 class="card-text-sub"><%= //collection.type %></h7> -->
-          <div id="owner-box">
-
+          <div id="owner-box"  class="line-elements">
             <% if (collection.owner.avatar) { %>
               <img
                 id="collection-owner-image"
@@ -53,12 +54,13 @@
             <% } %>
 
             <h5 id="collection-owner-name">by <%= collection.owner.name %></h5>
+          </div>
+
+          <div class="line-elements">
+            <a href="/collections/<%= collection._id %>" id="view-element-btn" class="btn btn-primary">View</a>
+          </div>
 
         </div>
-
-          <a href="/collections/<%= collection._id %>" class="btn btn-primary">View</a>
-
-          </div>
 
         <% }) %>
 
