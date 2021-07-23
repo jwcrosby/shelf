@@ -23,9 +23,8 @@
             <h2 id="collection-type"><%= collection.type %></h2>
         </div>
 
+        <% if (isSelf) { %>
         <div>
-
-            <% if (isSelf) { %>
 
             <div id="collection-btn-container">
                 <a href="/collections/<%= collection._id %>/edit">
@@ -38,14 +37,13 @@
                 >
                 <button type="submit" class="btn btn-danger" id="collection-delete-btn">Delete</button></form>
             </div>
-            <% } %> 
 
             <div id="add-btn-container">
                 <a href="/collections/<%= collection._id %>/records/new">
                     <button type="submit" class="btn btn-success" id="record-add-btn">➕Add New Item</button></a>
             </div>
-
         </div>
+        <% } %> 
         <div>
 
             <div id="record-container">
@@ -83,7 +81,8 @@
                     <div class="line-elements" id="record-button-container">
 
                             <a href="/collections/<%= collection._id %>/records/<%= record._id %>" class="btn btn-primary" id="record-view-btn">View</a>
-
+                            
+                            <% if (isSelf) { %>
                             <a href="/collections/<%= collection._id %>/records/<%= record._id %>/edit" class="btn btn-warning" id="record-edit-btn">Edit</button></a>
 
                         <form 
@@ -92,6 +91,7 @@
                         method="POST">
                             <button type="submit" class="btn btn-danger" id="record-delete-btn">Delete</button>
                         </form>
+                        <% } %>
                     </div>
                 </div>
                 <% }) %>
