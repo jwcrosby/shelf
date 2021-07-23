@@ -55,7 +55,7 @@ body{
 }
 
 .line-elements {
-    width: 23%;
+    width: 19%;
     display: flex;
     flex-direction: column;
     align-items: center;

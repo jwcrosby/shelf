@@ -124,9 +124,9 @@ function update(req, res) {
             record.author = req.body.author
         }
 
-        if(record.releaseDate !== req.body.releaseDate) {
-            record.releaseDate = req.body.releaseDate
-        }
+        // if(record.releaseDate !== req.body.releaseDate) {
+        //     record.releaseDate = req.body.releaseDate
+        // }
 
         if(record.notes !== req.body.notes) {
             record.notes = req.body.notes
