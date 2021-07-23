@@ -3,37 +3,80 @@
 <%- include('../partials/nav') %>
 
 <main>
+    <body>
+        <div id="return-to-record-header">
+            <a href="/collections/<%= collection._id %>">
+                <h3 id="return-to-record-text">Return to "<%= collection.name %>"</h3></a>
+        </div>
 
-    <a href="/collections/<%= collection._id %>">
-        <h3> Return to <%= collection.name %></h3></a>
+        <div id="add-record-header">
+            <h1 class="header-text" id="title-header">Add a New Record</h1>
 
-    <h1>Add a New Record</h1>
-    
-    <form 
-        id="add-record-form" 
-        action="/collections/<%= collection._id %>/records" 
-        method="POST"
-        autocomplete="off">
+            <img
+            id="add-record-icon"
+            src="/images/icons/add.png"
+            alt="add a new record header image"
+            />
+        </div>
 
-        <label for="title-input">Title:</label>
-            <input type="text" name="title" id="title-input">
+        <div>
 
-        <label for="author-input">Artist/Author:</label>
-            <input type="text" name="author" id="author-input">
+            <form 
+            id="add-record-form" 
+            action="/collections/<%= collection._id %>/records" 
+            method="POST"
+            autocomplete="off">
 
-        <label for="release-date">Release Date:</label>
-            <input type="date" name="releaseDate" id="release-date">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="title-input" class="field-tabel-text">Title:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="title" id="title-input" class="input-field">
+                    </div>
+                </div>
 
-        <label for="notes-input">Notes:</label>
-            <input type="text" name="notes" id="notes-input">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="author-input" class="field-tabel-text">Artist/Author:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="author" id="author-input" class="input-field">
+                    </div>
+                </div>
 
-        <label for="image-url-input">Image URL:</label>
-            <input type="text" name="imageUrl" id="image-url-input">
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="release-date" class="field-tabel-text">Release Date:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="date" name="releaseDate" id="release-date" class="input-field">
+                    </div>
+                </div>
 
-        <button type="submit">Add Record</button>
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="notes-input" class="field-tabel-text">Notes:</label>
+                    </div>
+                        <div class="field-containers-input-field">
+                        <input type="text" name="notes" id="notes-input" class="input-field">
+                    </div>
+                </div>
 
-    </form>
+                <div class="field-containers">
+                    <div class="field-containers-label">
+                        <label for="image-url-input" class="field-tabel-text">Image URL:</label>
+                    </div>
+                    <div class="field-containers-input-field">
+                        <input type="text" name="imageUrl" id="image-url-input" class="input-field">
+                    </div>
+                </div>
 
+                    <button type="submit" class="btn btn-success">Add Item to Collection</button>
+
+            </form>
+        </div>
+    </body>
 </main>
 
 <%- include('../partials/footer') %>

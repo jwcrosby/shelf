@@ -5,7 +5,6 @@ main {
     min-height: var(--min-view-height);
     color: rgb(241,241,241);
     background-size: 100vw;
-    font-family: 'Rubik', sans-serif;
 }
 
 body{
@@ -48,6 +47,7 @@ body{
 
 .record-sub-headers-text {
     font-size: 1.7rem;  
+    font-family: 'Rubik', sans-serif;
 }
 
 .record-details-text {
@@ -69,6 +69,7 @@ body{
     align-items: center;
     justify-content: center; 
     margin: 5px;
+    font-family: 'Rubik', sans-serif;
 }
 
 #record-author{
