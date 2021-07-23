@@ -2,11 +2,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <h1>Edit: <%= ${collection.name}  %></h1>
+    <h1>Edit: <%= collection.name  %></h1>
     <form 
     id="edit-form" 
     action="/collections/<%= collection._id %>?_method=PUT"
-    method="POST">
+    method="POST"
+    autocomplete="off">
 
         <label for="name-input">Collection Name:</label>
             <input type="text" name="name" id="name-input" value=<%= collection.name %>>

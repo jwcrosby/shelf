@@ -11,7 +11,8 @@
     <form 
         id="add-record-form" 
         action="/collections/<%= collection._id %>/records" 
-        method="POST">
+        method="POST"
+        autocomplete="off">
 
         <label for="title-input">Title:</label>
             <input type="text" name="title" id="title-input">

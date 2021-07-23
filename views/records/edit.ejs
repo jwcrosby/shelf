@@ -11,7 +11,8 @@
     <form 
         id="edit-record-form" 
         action="/collections/<%= record.collectionParent._id %>/records/<%= record._id %>?_method=PUT"
-        method="POST">
+        method="POST"
+        autocomplete="off">
 
         <label for="title-input">Title:</label>
             <input type="text" name="title" id="title-input"  value="<%= record.title %>" >
