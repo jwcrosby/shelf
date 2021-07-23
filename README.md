@@ -8,7 +8,7 @@ Your collections made simple.
 
 ## Screenshots
 
-![DESKTOP SCREENSHOT](/images/readme/desktop.png/) 
+![DESKTOP SCREENSHOT](/public/images/readme/desktop.png/) 
 
 ## Languages Used
 
